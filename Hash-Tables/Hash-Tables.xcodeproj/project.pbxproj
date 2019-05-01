@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		44AA3110227A2BD200703AB9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 44AA310F227A2BD200703AB9 /* main.c */; };
 		44AA311A227A2BE700703AB9 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 44AA3117227A2BE700703AB9 /* Makefile */; };
 		44AA311B227A2BE700703AB9 /* b_hashtables.c in Sources */ = {isa = PBXBuildFile; fileRef = 44AA3118227A2BE700703AB9 /* b_hashtables.c */; };
 /* End PBXBuildFile section */
@@ -26,7 +25,6 @@
 
 /* Begin PBXFileReference section */
 		44AA310C227A2BD200703AB9 /* Hash-Tables */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Hash-Tables"; sourceTree = BUILT_PRODUCTS_DIR; };
-		44AA310F227A2BD200703AB9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		44AA3116227A2BE700703AB9 /* tests */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tests; path = ../../basic_hashtable/tests; sourceTree = "<group>"; };
 		44AA3117227A2BE700703AB9 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = Makefile; path = ../../basic_hashtable/Makefile; sourceTree = "<group>"; };
 		44AA3118227A2BE700703AB9 /* b_hashtables.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = b_hashtables.c; path = ../../basic_hashtable/b_hashtables.c; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 		44AA310E227A2BD200703AB9 /* Hash-Tables */ = {
 			isa = PBXGroup;
 			children = (
-				44AA310F227A2BD200703AB9 /* main.c */,
 				44AA3118227A2BE700703AB9 /* b_hashtables.c */,
 				44AA3119227A2BE700703AB9 /* b_hashtables.h */,
 				44AA3117227A2BE700703AB9 /* Makefile */,
@@ -130,7 +127,6 @@
 			files = (
 				44AA311A227A2BE700703AB9 /* Makefile in Sources */,
 				44AA311B227A2BE700703AB9 /* b_hashtables.c in Sources */,
-				44AA3110227A2BD200703AB9 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

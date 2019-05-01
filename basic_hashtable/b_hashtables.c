@@ -88,7 +88,14 @@ BasicHashTable *create_hash_table(int capacity)
  ****/
 void hash_table_insert(BasicHashTable *ht, char *key, char *value)
 {
-
+    
+    if (ht->storage[hash(key, ht->capacity)]) {
+        printf("warning: overwriting a value with a different key");
+        free(ht->storage[hash(key, ht->capacity)]) ;
+    }
+    // add to the hash_table
+    ht->storage[hash(key, ht->capacity)] = create_pair(key, value);
+    
 }
 
 /****
@@ -98,6 +105,7 @@ void hash_table_insert(BasicHashTable *ht, char *key, char *value)
  ****/
 void hash_table_remove(BasicHashTable *ht, char *key)
 {
+    
 
 }
 
@@ -108,9 +116,13 @@ void hash_table_remove(BasicHashTable *ht, char *key)
  ****/
 char *hash_table_retrieve(BasicHashTable *ht, char *key)
 {
+    Pair *pair = ht->storage[hash(key, ht->capacity)];
+    
+  if (pair == NULL) {
   return NULL;
 }
-
+ return pair->value;
+}
 /****
   Fill this in.
 
@@ -118,6 +130,7 @@ char *hash_table_retrieve(BasicHashTable *ht, char *key)
  ****/
 void destroy_hash_table(BasicHashTable *ht)
 {
+    
 
 }
 
