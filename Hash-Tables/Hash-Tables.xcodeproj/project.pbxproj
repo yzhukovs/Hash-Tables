@@ -9,10 +9,21 @@
 /* Begin PBXBuildFile section */
 		44AA311A227A2BE700703AB9 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 44AA3117227A2BE700703AB9 /* Makefile */; };
 		44AA311B227A2BE700703AB9 /* b_hashtables.c in Sources */ = {isa = PBXBuildFile; fileRef = 44AA3118227A2BE700703AB9 /* b_hashtables.c */; };
+		44AA312B227B90AF00703AB9 /* hashtables.c in Sources */ = {isa = PBXBuildFile; fileRef = 44AA3128227B90AF00703AB9 /* hashtables.c */; };
+		44AA312C227B90AF00703AB9 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 44AA3129227B90AF00703AB9 /* Makefile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		44AA310A227A2BD200703AB9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		44AA311E227B902200703AB9 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -29,10 +40,22 @@
 		44AA3117227A2BE700703AB9 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = Makefile; path = ../../basic_hashtable/Makefile; sourceTree = "<group>"; };
 		44AA3118227A2BE700703AB9 /* b_hashtables.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = b_hashtables.c; path = ../../basic_hashtable/b_hashtables.c; sourceTree = "<group>"; };
 		44AA3119227A2BE700703AB9 /* b_hashtables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = b_hashtables.h; path = ../../basic_hashtable/b_hashtables.h; sourceTree = "<group>"; };
+		44AA3120227B902200703AB9 /* full_hash_table */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = full_hash_table; sourceTree = BUILT_PRODUCTS_DIR; };
+		44AA3127227B90AF00703AB9 /* hashtables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hashtables.h; path = ../../full_hashtable/hashtables.h; sourceTree = "<group>"; };
+		44AA3128227B90AF00703AB9 /* hashtables.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hashtables.c; path = ../../full_hashtable/hashtables.c; sourceTree = "<group>"; };
+		44AA3129227B90AF00703AB9 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = Makefile; path = ../../full_hashtable/Makefile; sourceTree = "<group>"; };
+		44AA312A227B90AF00703AB9 /* tests */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tests; path = ../../full_hashtable/tests; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		44AA3109227A2BD200703AB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44AA311D227B902200703AB9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				44AA310E227A2BD200703AB9 /* Hash-Tables */,
+				44AA3121227B902300703AB9 /* full_hash_table */,
 				44AA310D227A2BD200703AB9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				44AA310C227A2BD200703AB9 /* Hash-Tables */,
+				44AA3120227B902200703AB9 /* full_hash_table */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +92,17 @@
 				44AA3116227A2BE700703AB9 /* tests */,
 			);
 			path = "Hash-Tables";
+			sourceTree = "<group>";
+		};
+		44AA3121227B902300703AB9 /* full_hash_table */ = {
+			isa = PBXGroup;
+			children = (
+				44AA3128227B90AF00703AB9 /* hashtables.c */,
+				44AA3127227B90AF00703AB9 /* hashtables.h */,
+				44AA3129227B90AF00703AB9 /* Makefile */,
+				44AA312A227B90AF00703AB9 /* tests */,
+			);
+			path = full_hash_table;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +125,23 @@
 			productReference = 44AA310C227A2BD200703AB9 /* Hash-Tables */;
 			productType = "com.apple.product-type.tool";
 		};
+		44AA311F227B902200703AB9 /* full_hash_table */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44AA3124227B902300703AB9 /* Build configuration list for PBXNativeTarget "full_hash_table" */;
+			buildPhases = (
+				44AA311C227B902200703AB9 /* Sources */,
+				44AA311D227B902200703AB9 /* Frameworks */,
+				44AA311E227B902200703AB9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = full_hash_table;
+			productName = full_hash_table;
+			productReference = 44AA3120227B902200703AB9 /* full_hash_table */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +152,9 @@
 				ORGANIZATIONNAME = "Lambda School Labs";
 				TargetAttributes = {
 					44AA310B227A2BD200703AB9 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					44AA311F227B902200703AB9 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
@@ -116,6 +172,7 @@
 			projectRoot = "";
 			targets = (
 				44AA310B227A2BD200703AB9 /* Hash-Tables */,
+				44AA311F227B902200703AB9 /* full_hash_table */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +184,15 @@
 			files = (
 				44AA311A227A2BE700703AB9 /* Makefile in Sources */,
 				44AA311B227A2BE700703AB9 /* b_hashtables.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44AA311C227B902200703AB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44AA312C227B90AF00703AB9 /* Makefile in Sources */,
+				44AA312B227B90AF00703AB9 /* hashtables.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +328,24 @@
 			};
 			name = Release;
 		};
+		44AA3125227B902300703AB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NH6AR4LY3J;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		44AA3126227B902300703AB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NH6AR4LY3J;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -279,6 +363,15 @@
 			buildConfigurations = (
 				44AA3114227A2BD200703AB9 /* Debug */,
 				44AA3115227A2BD200703AB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44AA3124227B902300703AB9 /* Build configuration list for PBXNativeTarget "full_hash_table" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44AA3125227B902300703AB9 /* Debug */,
+				44AA3126227B902300703AB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
