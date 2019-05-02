@@ -71,7 +71,11 @@ unsigned int hash(char *str, int max)
 BasicHashTable *create_hash_table(int capacity)
 {
   BasicHashTable *ht;
-
+    ht = malloc(sizeof(BasicHashTable)) ;
+    //Hash table's capacity
+    ht->capacity = capacity ;
+    //Storage memory allocation
+    ht->storage = calloc(capacity, sizeof(Pair)) ;
   return ht;
 }
 
@@ -84,7 +88,14 @@ BasicHashTable *create_hash_table(int capacity)
  ****/
 void hash_table_insert(BasicHashTable *ht, char *key, char *value)
 {
-
+    
+    if (ht->storage[hash(key, ht->capacity)]) {
+        printf("warning: overwriting a value with a different key");
+        free(ht->storage[hash(key, ht->capacity)]) ;
+    }
+    // add to the hash_table
+    ht->storage[hash(key, ht->capacity)] = create_pair(key, value);
+    
 }
 
 /****
@@ -94,6 +105,14 @@ void hash_table_insert(BasicHashTable *ht, char *key, char *value)
  ****/
 void hash_table_remove(BasicHashTable *ht, char *key)
 {
+    Pair *pair = ht->storage[hash(key, ht->capacity)];
+    
+    if (pair == NULL) {
+        fprintf(stderr, "error removing\n");
+        return ;
+    }
+    ht->storage[hash(key, ht->capacity)] = NULL ;
+    destroy_pair(pair);
 
 }
 
@@ -104,9 +123,13 @@ void hash_table_remove(BasicHashTable *ht, char *key)
  ****/
 char *hash_table_retrieve(BasicHashTable *ht, char *key)
 {
+    Pair *pair = ht->storage[hash(key, ht->capacity)];
+    
+  if (pair == NULL) {
   return NULL;
 }
-
+ return pair->value;
+}
 /****
   Fill this in.
 
@@ -114,6 +137,12 @@ char *hash_table_retrieve(BasicHashTable *ht, char *key)
  ****/
 void destroy_hash_table(BasicHashTable *ht)
 {
+    for (int index = 0; index < ht->capacity; index++) {
+        free(ht->storage[index]); //Looping through hash_table and freeing elements
+    }
+
+    free(ht->storage);
+    free(ht);
 
 }
 
